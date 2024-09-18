@@ -80,6 +80,12 @@ a.active{
   
 /* Media Query for mobile devices */
 @media (max-width: 1080px) {
+    .navlogo h1{
+      color: white;
+      font-size: 25px;
+      margin:auto;
+    }
+
     .navbuttons {
       display: none;
     }
