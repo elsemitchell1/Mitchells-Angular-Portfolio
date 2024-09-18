@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background: black;
+}
+.gradient{
+    background-image: linear-gradient(to right, #FFA500, #FFFF00);
+}
+
+.gradient-text{
+    background-image: linear-gradient(to right, #FFA500, #FFFF00);
+    background-clip: text;
+    -webkit-background-clip: text; /* For WebKit-based browsers like Chrome and Safari */
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}

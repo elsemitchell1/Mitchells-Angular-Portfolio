@@ -1,0 +1,17 @@
+<div class="hero-container">
+  <div class="hero-content" [ngClass]="{'reverse': reverse}">
+    <div class="hero-text">
+      <h2>{{ heading }}</h2>
+      <h4 class="gradient-text" *ngIf="secondheading">
+        I am a, {{ typedText }}
+        <span class="typing-bar"></span>
+      </h4>
+      <p>{{ info }}</p>
+    </div>
+    <div class="hero-image">
+      <div class="image-wrapper">
+        <img [src]="image" alt="Hero Image" />
+      </div>
+    </div>
+  </div>
+</div>

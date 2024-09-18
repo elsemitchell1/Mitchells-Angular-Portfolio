@@ -1,0 +1,20 @@
+<div class="timeline-container">
+    <div class="timeline-line"></div>
+    <div *ngFor="let event of timelineData; let i = index" class="timeline-item">
+        <div class="timeline-content" [ngClass]="{'reverse': i % 2 === 1}">
+            <div class="timeline-text">
+                <div class="timeline-card">
+                    <div class="timeline-card-content">
+                    <h3 class="timeline-title">{{ event.title }}</h3>
+                    <time class="timeline-date">{{ event.date }}</time>
+                    <p class="timeline-description">{{ event.description }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-icon-container">
+                <div class="timeline-icon"></div>
+            </div>
+            <div class="timeline-empty-space"></div>
+        </div>
+    </div>
+</div>

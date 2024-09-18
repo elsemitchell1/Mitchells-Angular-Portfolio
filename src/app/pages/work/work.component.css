@@ -1,0 +1,17 @@
+.work-page-container {
+    margin: 2.5rem;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header-title {
+    margin-bottom: 1.5rem;
+    font-size: 3rem; /* Adjust as needed */
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+  }
