@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/Mitchells-Angular-Portfolio",
-            "baseHref": "/Mitchells-Angular-Portfolio/",
+            "baseHref": "https://elsemitchell1.github.io/Mitchells-Angular-Portfolio/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
