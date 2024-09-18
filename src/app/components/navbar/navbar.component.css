@@ -1,11 +1,12 @@
 .navbar{
     background-color: black;
     height: 80px;
+    padding: 0 50px;
 }
 
 .navcontainer{
     display: flex;
-    max-width: 1600px;
+    max-width: 1500px;
     height: 100%;
     margin: auto;
     justify-content: space-between;
@@ -13,7 +14,7 @@
 }
 
 .navlogo{
-    margin: auto;
+    margin: auto auto auto 0;
     display: flex;
 }
 
@@ -28,9 +29,9 @@
     color: white;
     text-decoration: none;
     padding: 10px;
-    max-width: 700px;
+    max-width: 600px;
     width: 100%;
-    margin: auto;
+    margin: auto 0 auto auto;
     justify-items: center;
     justify-content: space-between;
 }
@@ -44,4 +45,51 @@
 a.active{
     font-weight: bold;
     border-bottom: 2px solid white;
+}
+
+.mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+}
+  
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: black;
+    text-align: center;
+    padding: 10px 0;
+}
+  
+.mobile-menu a {
+    display: block;
+    padding: 10px 0;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+  
+.mobile-menu.active {
+    display: block;
+}
+  
+/* Media Query for mobile devices */
+@media (max-width: 1080px) {
+    .navbuttons {
+      display: none;
+    }
+    
+    .mobile-menu-button {
+      display: block;
+    }
+    
+    a.active {
+        max-width: 150px;
+        margin: auto;
+    }
 }
