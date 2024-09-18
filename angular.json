@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-test",
+            "outputPath": "dist/Mitchells-Angular-Portfolio",
             "baseHref": "/Mitchells-Angular-Portfolio/",
             "index": "src/index.html",
             "browser": "src/main.ts",
