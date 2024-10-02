@@ -3,10 +3,11 @@
     justify-content: center;
     justify-items: center;
     width: 100%;
-    padding: 20px;
+    margin: auto;
 }
 
 .resume-inner {
+    margin: 10px;
     display: flex;
     padding: 3px;
     background: linear-gradient(to right, #FFA500, #FFFF00);

@@ -83,13 +83,20 @@ a.active{
   
 .mobile-menu.active {
     display: block;
+    z-index: 20;
 }
   
 /* Media Query for mobile devices */
 @media (max-width: 1080px) {
+    .navbar{
+        padding: 0 20px;
+    }
+    .navlogo fa-icon {
+        font-size: 26px;
+    }
     .navlogo h1{
       color: white;
-      font-size: 26px;
+      font-size: 30px;
       margin:auto;
     }
 
