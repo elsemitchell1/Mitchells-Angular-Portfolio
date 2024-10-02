@@ -1,0 +1,20 @@
+.resume-outer {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.resume-inner {
+    display: flex;
+    padding: 3px;
+    background: linear-gradient(to right, #FFA500, #FFFF00);
+    border-radius: 20px;
+}
+
+.resume-inner img {
+    width: 100%;
+    max-width: 1024px;
+    border-radius: 18px;
+}

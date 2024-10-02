@@ -103,3 +103,10 @@
     justify-content: center;
     font-size: 10px;
 }
+
+@media (max-width: 768px){
+    .footer-nav-list {
+        font-size: 12px;
+        gap: 15px;
+    }
+}

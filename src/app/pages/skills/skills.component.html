@@ -1,1 +1,13 @@
-<p>skills works!</p>
+<div class="skills-page-container">
+    <div class="skills-page-content">
+        <h1>Skills</h1>
+        <p>Here are some of the skills that I have been working on.</p>
+        <div class="skills-list">
+            <app-skillcard class="skillcard"
+            *ngFor="let skill of skills; let i = index"
+            [heading]="skill.heading"
+            [skills]="skill.skills">
+            </app-skillcard>
+        </div>
+    </div>
+</div>

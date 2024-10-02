@@ -1,0 +1,22 @@
+<div class="project-outer">
+    <a [href]="project.link" target="_blank" class="project-link">
+        <div class="project-card">
+            <div class="project-image">
+                <img [src]="project.image" [alt]="project.image" />
+            </div>
+            <div class="project-skills">
+                <div *ngFor="let skill of project.skills" class="skill">
+                    <fa-icon class="icon" [icon]="skill.icon"></fa-icon>
+                    <span>{{ skill.skill }}</span>
+                </div>
+            </div>
+            <div class="project-info">
+                <h3>{{ project.name }}</h3>
+                <h5>{{ project.date }}</h5>
+                <p>{{ project.info }}</p>
+            </div>
+        </div>
+    </a>
+</div>
+  
+<app-comments [project]="project"></app-comments>

@@ -1,0 +1,11 @@
+<div class="skills-container">
+    <div class="skills-content">
+        <h1>{{ heading }}</h1>
+        <div class="skills-grid">
+            <div *ngFor="let skill of skills" class="skill-item">
+                <fa-icon class="icon" *ngIf="skill.icon.iconName" [icon]="skill.icon"></fa-icon>
+                <h4 class="skill-name">{{ skill.skill }}</h4>
+            </div>
+        </div>
+    </div>
+</div>

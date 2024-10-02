@@ -1,0 +1,39 @@
+.comments-container {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #FFA500, #FFFF00);
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    gap: 10px
+}
+
+.comment-button {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+  
+.comment-form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+  
+.comment-form input, .comment-form textarea {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+  
+.comment-form button {
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+  
+.comment {
+    margin-bottom: 10px;
+}

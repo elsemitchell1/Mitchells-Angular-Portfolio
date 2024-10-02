@@ -1,0 +1,22 @@
+<div class="comments-container">
+    <button class="comment-button" *ngIf="!loading" (click)="toggleComments()">
+      Show {{ comments.length }} Comment<span *ngIf="comments.length > 1 || comments.length == 0">s</span>
+    </button>
+  
+    <div *ngIf="showComments">
+        <div *ngFor="let comment of comments" class="comment">
+            <h5>{{ comment.name }}</h5>
+            <p>{{ comment.message }}</p>
+        </div>
+    </div>
+  
+    <button class="comment-button" (click)="showForm = !showForm">Add Comment</button>
+  
+    <div *ngIf="showForm" class="comment-form">
+        <form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+            <input formControlName="name" placeholder="Your name" />
+            <textarea formControlName="message" placeholder="Your comment"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
