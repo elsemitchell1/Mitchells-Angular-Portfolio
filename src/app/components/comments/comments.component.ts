@@ -50,9 +50,17 @@ export class CommentsComponent implements OnInit {
         name: this.commentForm.value.name,
         message: this.commentForm.value.message
       };
-      this.comments.push(newComment);
-      this.commentForm.reset();
-      this.showForm = false;
+      this.http.post('https://portfolio-server-yqaw.onrender.com/comments', newComment)
+      .subscribe({
+        next: (data) => {
+          this.comments.push(data);
+          this.commentForm.reset();
+          this.showForm = false;
+        },
+        error: (error) => {
+          console.error(error);
+        }
+      });
     }
   }
 
