@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Component, inject, Input, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-comments',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, HttpClientModule],
   templateUrl: './comments.component.html',
   styleUrl: './comments.component.css'
 })
@@ -17,7 +18,7 @@ export class CommentsComponent implements OnInit {
   loading = true;
   commentForm: FormGroup;
 
-  constructor(private fb: FormBuilder){
+  constructor(private fb: FormBuilder, private http: HttpClient){
     this.commentForm = this.fb.group({
       name: ['', Validators.required],
       message: ['', Validators.required]
@@ -29,7 +30,17 @@ export class CommentsComponent implements OnInit {
   }
 
   fetchComments(){
-    this.loading = false;
+    this.http.get<any[]>(`https://portfolio-server-yqaw.onrender.com/comments/${this.project.name}`)
+    .subscribe({
+      next: (data) => {
+        this.comments = data;
+        this.loading = false;
+      },
+      error: (error) => {
+        console.error(error);
+        this.loading = false;
+      }
+    });
   }
 
   onSubmit(){

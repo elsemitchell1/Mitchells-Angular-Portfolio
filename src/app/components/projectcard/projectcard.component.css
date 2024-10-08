@@ -45,8 +45,12 @@
     color: white;
 }
 
+.project-info h3 {
+    margin-top: 10px; 
+}
+
 .project-info h5 {
-    margin: -5px 0;
+    margin: -8px 0;
     font-size: 12px;
     font-weight: 100;
 }

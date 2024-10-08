@@ -33,7 +33,22 @@
     margin: 10px;
     cursor: pointer;
 }
+
+.comment-section {
+    overflow-y: scroll;
+    height: 50px;
+}
   
 .comment {
     margin-bottom: 10px;
+}
+
+.comment h5 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.comment p {
+    margin: 0 0 5px 0;
+    font-size: 12px;
 }
