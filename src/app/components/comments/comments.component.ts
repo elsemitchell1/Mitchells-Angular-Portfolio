@@ -65,6 +65,8 @@ export class CommentsComponent implements OnInit {
   }
 
   toggleComments(){
-    this.showComments = !this.showComments;
+    if(this.comments.length > 0){
+      this.showComments = !this.showComments;
+    }
   }
 }
